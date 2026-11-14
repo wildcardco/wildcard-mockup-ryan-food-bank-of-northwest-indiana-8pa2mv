@@ -1,0 +1,484 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Food Bank of Northwest Indiana | Merrillville, IN</title>
+<meta name="description" content="The food bank serving Lake and Porter counties. Find food, volunteer, or give. 6490 Broadway, Merrillville, IN. Call 219.980.1777.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --primary:#DC7B2E;--primary-d:#B8601C;--accent:#FFDF00;--dark:#231F20;--light:#FFFFFF;
+  --cream:#FBF6EF;--muted:#5d5657;--line:#ece4da;
+  --r:10px;--wrap:1200px;
+  --display:"Plus Jakarta Sans",system-ui,sans-serif;--body:"Poppins",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{font-family:var(--body);color:var(--dark);background:var(--light);line-height:1.65;font-size:1rem;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);line-height:1.12;overflow-wrap:anywhere;letter-spacing:-.02em}
+h2{font-size:clamp(1.85rem,3.6vw,2.9rem);font-weight:800}
+h3{font-size:1.2rem;font-weight:700}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 clamp(1.1rem,4vw,2rem)}
+.eyebrow{font-family:var(--display);font-weight:700;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--primary-d);margin-bottom:.8rem;display:block}
+.lead{font-size:1.1rem;color:var(--muted);max-width:60ch}
+section{padding:clamp(4rem,8vw,6.5rem) 0}
+
+/* buttons: one corner style */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;font-family:var(--display);font-weight:700;font-size:1rem;padding:.9rem 1.5rem;border-radius:var(--r);text-decoration:none;border:2px solid transparent;transition:background .2s,color .2s,transform .2s,border-color .2s;cursor:pointer;line-height:1.2}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--primary);color:#fff}
+.btn-primary:hover{background:var(--primary-d)}
+.btn-accent{background:var(--accent);color:var(--dark)}
+.btn-accent:hover{background:#ffe93d}
+.btn-ghost{border-color:rgba(255,255,255,.8);color:#fff}
+.btn-ghost:hover{background:#fff;color:var(--dark)}
+.btn-dark{background:var(--dark);color:#fff}
+.btn-dark:hover{background:#000}
+.btn:focus-visible,a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+
+/* utility bar */
+.util{background:var(--dark);color:#e9e2dc;font-size:.82rem}
+.util .wrap{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding-top:.45rem;padding-bottom:.45rem}
+.util a{text-decoration:none;color:#fff}
+.util a:hover{color:var(--accent)}
+.util .links{display:flex;gap:1.3rem}
+@media(max-width:700px){.util .links{display:none}.util .wrap{justify-content:center}}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.97);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:76px}
+.logo img{height:52px;width:auto;object-fit:contain}
+.menu{display:flex;align-items:center;gap:1.6rem;list-style:none}
+.menu a{text-decoration:none;font-family:var(--display);font-weight:600;font-size:.97rem}
+.menu a:not(.btn):hover{color:var(--primary-d)}
+.nav-actions{display:flex;align-items:center;gap:.6rem}
+.nav .btn{padding:.65rem 1.1rem;font-size:.92rem}
+.toggle{display:none;background:none;border:2px solid var(--dark);border-radius:var(--r);width:46px;height:44px;cursor:pointer;align-items:center;justify-content:center}
+.toggle span,.toggle span::before,.toggle span::after{display:block;width:20px;height:2px;background:var(--dark);position:relative;transition:transform .2s}
+.toggle span::before,.toggle span::after{content:"";position:absolute;left:0}
+.toggle span::before{top:-6px}.toggle span::after{top:6px}
+.toggle[aria-expanded="true"] span{background:transparent}
+.toggle[aria-expanded="true"] span::before{transform:translateY(6px) rotate(45deg)}
+.toggle[aria-expanded="true"] span::after{transform:translateY(-6px) rotate(-45deg)}
+@media(max-width:960px){
+  .toggle{display:inline-flex}
+  .menu{position:absolute;top:76px;left:0;right:0;background:#fff;flex-direction:column;align-items:stretch;gap:0;padding:.5rem clamp(1.1rem,4vw,2rem) 1.2rem;border-bottom:1px solid var(--line);box-shadow:0 18px 30px rgba(0,0,0,.08);display:none}
+  .menu.open{display:flex}
+  .menu li a:not(.btn){display:block;padding:.85rem 0;border-bottom:1px solid var(--line)}
+  .menu .btn{margin-top:1rem;width:100%}
+}
+@media(max-width:420px){.nav .call-txt{display:none}.logo img{height:44px}}
+
+/* hero */
+.hero{position:relative;min-height:min(86vh,760px);display:flex;align-items:center;color:#fff;padding:clamp(4rem,9vw,7rem) 0;overflow:hidden}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(35,31,32,.92) 0%,rgba(35,31,32,.78) 45%,rgba(35,31,32,.35) 100%)}
+.hero .wrap{position:relative;z-index:1;width:100%}
+.hero h1{font-size:clamp(2.4rem,6vw,4.5rem);font-weight:800;max-width:15ch;margin-bottom:1.2rem}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero p{font-size:clamp(1.05rem,1.6vw,1.25rem);max-width:54ch;color:#f1ece7;margin-bottom:2rem}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:.8rem}
+.hero .tag{display:inline-block;background:var(--primary);color:#fff;font-family:var(--display);font-weight:700;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;padding:.4rem .8rem;border-radius:var(--r);margin-bottom:1.3rem}
+@media(max-width:480px){.hero .ctas .btn{flex:1 1 100%}}
+
+/* stats */
+.stats{background:var(--primary);color:#fff;padding:clamp(2.6rem,5vw,3.6rem) 0}
+.stats .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem}
+.stat b{display:block;font-family:var(--display);font-size:clamp(2.2rem,4.4vw,3.4rem);font-weight:800;line-height:1;letter-spacing:-.03em}
+.stat span{display:block;margin-top:.5rem;font-size:.95rem;color:#fff4ea}
+@media(max-width:800px){.stats .grid{grid-template-columns:repeat(2,1fr);gap:2rem 1.2rem}}
+
+/* find food */
+.find{background:var(--cream)}
+.split{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(2rem,5vw,4.5rem);align-items:center}
+.find-list{display:grid;gap:1rem;margin-top:2rem}
+.find-item{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:1.3rem 1.4rem;display:flex;gap:1rem;align-items:flex-start}
+.find-item .dot{flex:none;width:12px;height:12px;border-radius:50%;background:var(--primary);margin-top:.5rem}
+.find-item p{color:var(--muted);font-size:.95rem}
+.callcard{background:var(--dark);color:#fff;border-radius:var(--r);padding:clamp(1.8rem,4vw,2.8rem)}
+.callcard h3{font-size:1.6rem;margin-bottom:.8rem}
+.callcard p{color:#d9d1ca;margin-bottom:1.6rem}
+.callcard .num{display:block;font-family:var(--display);font-weight:800;font-size:clamp(1.8rem,4vw,2.5rem);color:var(--accent);text-decoration:none;margin-bottom:1.4rem}
+.callcard .row{display:flex;flex-wrap:wrap;gap:.7rem}
+@media(max-width:900px){.split{grid-template-columns:1fr}}
+
+/* programs */
+.head{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem;flex-wrap:wrap;margin-bottom:2.8rem}
+.head .lead{margin-top:.8rem}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
+.card{border:1px solid var(--line);border-radius:var(--r);padding:1.7rem;background:#fff;display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s,border-color .25s;border-top:4px solid var(--primary)}
+.card:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(35,31,32,.09)}
+.card h3{margin-bottom:.6rem}
+.card p{color:var(--muted);font-size:.95rem;flex:1}
+.card a{margin-top:1.1rem;font-family:var(--display);font-weight:700;color:var(--primary-d);text-decoration:none;font-size:.95rem}
+.card a:hover{text-decoration:underline}
+.chips{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:2rem}
+.chip{border:1px solid var(--line);background:var(--cream);border-radius:var(--r);padding:.5rem .9rem;font-size:.9rem;font-weight:500}
+@media(max-width:960px){.cards{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:620px){.cards{grid-template-columns:1fr}}
+
+/* involved */
+.involved{background:var(--dark);color:#fff}
+.involved .lead{color:#d6cec7}
+.involved .eyebrow{color:var(--accent)}
+.ways{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem}
+.way{background:#2f2a2b;border:1px solid #3d3738;border-radius:var(--r);padding:1.7rem;display:flex;flex-direction:column}
+.way h3{color:#fff;margin-bottom:.6rem}
+.way p{color:#cfc7c0;font-size:.94rem;flex:1;margin-bottom:1.3rem}
+.way .btn{align-self:flex-start;padding:.7rem 1.1rem;font-size:.92rem}
+@media(max-width:1000px){.ways{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.ways{grid-template-columns:1fr}}
+
+/* gallery */
+.gallery-grid{display:grid;grid-template-columns:1.6fr 1fr;grid-template-rows:280px 280px;gap:1.1rem}
+.frame{border-radius:var(--r);overflow:hidden;position:relative;background:var(--cream)}
+.frame img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.frame:hover img{transform:scale(1.03)}
+.frame figcaption{position:absolute;left:.9rem;bottom:.9rem;background:rgba(35,31,32,.85);color:#fff;font-size:.82rem;padding:.35rem .7rem;border-radius:var(--r)}
+.g-big{grid-row:1/3}
+.g-tall{grid-row:1/3}
+.gallery-grid.three{grid-template-columns:1.7fr 1fr .8fr}
+@media(max-width:860px){
+  .gallery-grid.three{grid-template-columns:1fr 1fr;grid-template-rows:260px 260px}
+  .gallery-grid.three .g-big{grid-column:1/3;grid-row:auto}
+  .gallery-grid.three .g-tall{grid-row:auto}
+}
+@media(max-width:560px){
+  .gallery-grid.three{grid-template-columns:1fr;grid-template-rows:none}
+  .gallery-grid.three .g-big{grid-column:auto}
+  .gallery-grid.three .frame{height:260px}
+  .gallery-grid.three .g-tall{height:380px}
+}
+
+/* about */
+.about{background:var(--cream)}
+.about-photo{max-width:1219px}
+.about-photo img{aspect-ratio:1219/871;width:100%;height:auto;object-fit:cover}
+.timeline{list-style:none;margin-top:1.8rem;border-left:3px solid var(--primary);padding-left:1.4rem;display:grid;gap:1.1rem}
+.timeline li{position:relative}
+.timeline li::before{content:"";position:absolute;left:calc(-1.4rem - 8px);top:.45rem;width:13px;height:13px;border-radius:50%;background:var(--accent);border:3px solid var(--primary)}
+.timeline b{font-family:var(--display);font-weight:800;color:var(--primary-d);display:block}
+.timeline span{color:var(--muted);font-size:.95rem}
+.badges{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.8rem}
+.badge{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:.55rem .9rem;font-family:var(--display);font-weight:700;font-size:.88rem}
+
+/* area */
+.area-box{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-top:2.4rem}
+.county{border-radius:var(--r);padding:2rem;background:var(--accent);color:var(--dark)}
+.county.alt{background:var(--primary);color:#fff}
+.county h3{font-size:clamp(1.5rem,3vw,2.1rem);margin-bottom:.5rem}
+.county p{font-size:.98rem}
+@media(max-width:700px){.area-box{grid-template-columns:1fr}}
+
+/* contact */
+.contact{background:var(--primary);color:#fff;text-align:center}
+.contact h2{max-width:20ch;margin:0 auto 1rem}
+.contact p{max-width:56ch;margin:0 auto 2rem;color:#fff4ea;font-size:1.1rem}
+.contact .ctas{display:flex;flex-wrap:wrap;gap:.8rem;justify-content:center}
+.contact-info{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem;margin-top:3rem;text-align:left}
+.info{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:var(--r);padding:1.4rem}
+.info small{display:block;text-transform:uppercase;letter-spacing:.12em;font-weight:600;font-size:.75rem;color:#ffe9d6;margin-bottom:.35rem}
+.info a,.info span{font-family:var(--display);font-weight:700;font-size:1.08rem;text-decoration:none;color:#fff}
+.info a:hover{color:var(--accent)}
+@media(max-width:760px){.contact-info{grid-template-columns:1fr}}
+
+/* footer */
+footer{background:var(--dark);color:#cfc7c0;padding:3.5rem 0 2rem;font-size:.92rem}
+.f-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:2rem}
+footer h3{color:#fff;font-size:1rem;margin-bottom:.9rem}
+footer ul{list-style:none;display:grid;gap:.45rem}
+footer a{text-decoration:none;color:#cfc7c0}
+footer a:hover{color:var(--accent)}
+.f-name{font-family:var(--display);font-weight:800;font-size:1.35rem;color:var(--primary);margin-bottom:.6rem}
+.f-bottom{border-top:1px solid #3d3738;margin-top:2.5rem;padding-top:1.4rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;font-size:.84rem}
+@media(max-width:760px){.f-grid{grid-template-columns:1fr}}
+
+/* sticky give */
+.give-float{position:fixed;right:1rem;bottom:1rem;z-index:60;box-shadow:0 10px 26px rgba(0,0,0,.25)}
+
+/* reveal */
+.js .reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
+.js .reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition:none!important;animation:none!important}
+  .js .reveal{opacity:1;transform:none}
+}
+</style>
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+
+<div class="util">
+  <div class="wrap">
+    <span>Serving Lake &amp; Porter counties · <a href="tel:+12199801777">219.980.1777</a></span>
+    <div class="links">
+      <a href="#about">About</a>
+      <a href="#involved">Volunteer</a>
+      <a href="http://www.foodbanknwi.org" rel="noopener">foodbanknwi.org</a>
+    </div>
+  </div>
+</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a href="#top" class="logo" aria-label="Food Bank of Northwest Indiana home">
+      <img src="https://foodbanknwi.org/wp-content/uploads/2022/06/FoodBank-Logo.svg" alt="Food Bank of Northwest Indiana" width="180" height="52">
+    </a>
+    <ul class="menu" id="menu">
+      <li><a href="#find">Get Food</a></li>
+      <li><a href="#programs">Programs</a></li>
+      <li><a href="#involved">Get Involved</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#area">Service Area</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a class="btn btn-primary" href="tel:+12199801777" aria-label="Call 219.980.1777">☎ <span class="call-txt">219.980.1777</span></a>
+      <button class="toggle" aria-expanded="false" aria-controls="menu" aria-label="Open menu"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" aria-label="Introduction">
+  <img class="hero-img" src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9T4PagxInyuG4B_sictlGEvdGpkxnMhOmDj66DrJmtkqxdgByrs2t9UQLHrPSCTUQSH_mc7qK7IyTBBgDIs6I5rpyzC87836PaqLIjVyCVtJCTv3w0bUfb9kvlFN_f0z0YK3Rzi=w1600-h1600" alt="Warehouse aisle stacked with palletized food at the Food Bank of Northwest Indiana" width="1600" height="1200" fetchpriority="high">
+  <div class="wrap">
+    <span class="tag">Lake &amp; Porter Counties</span>
+    <h1>Everyone in the Region deserves <em>enough to eat.</em></h1>
+    <p>Hunger is here, in our neighborhoods. We get food to more than 60,000 people a month through 150+ partner pantries and programs. Find food today, or help a neighbor get theirs.</p>
+    <div class="ctas">
+      <a class="btn btn-accent" href="#find">Get Food</a>
+      <a class="btn btn-primary" href="#involved">Give Help</a>
+      <a class="btn btn-ghost" href="#involved">Volunteer</a>
+    </div>
+  </div>
+</section>
+
+<div class="stats" aria-label="Our impact">
+  <div class="wrap grid reveal">
+    <div class="stat"><b>60,000+</b><span>people served each month</span></div>
+    <div class="stat"><b>150+</b><span>partner agencies</span></div>
+    <div class="stat"><b>2</b><span>counties: Lake and Porter</span></div>
+    <div class="stat"><b>Since 1982</b><span>feeding Northwest Indiana</span></div>
+  </div>
+</div>
+
+<section class="find" id="find">
+  <div class="wrap split">
+    <div class="reveal">
+      <span class="eyebrow">Get Food</span>
+      <h2>Need food? You don't have to figure it out alone.</h2>
+      <p class="lead" style="margin-top:1rem">Getting groceries is not something to be ashamed of. There are several ways to get food near you, and we'll help you find the right one.</p>
+      <div class="find-list">
+        <div class="find-item"><span class="dot"></span><div><h3>Pantry locator</h3><p>Find a partner pantry close to home, work, or school anywhere in Lake and Porter counties.</p></div></div>
+        <div class="find-item"><span class="dot"></span><div><h3>Mobile Market</h3><p>Fresh food brought out into the community, so you can pick up groceries closer to where you live.</p></div></div>
+        <div class="find-item"><span class="dot"></span><div><h3>Order Ahead lockers</h3><p>Place an order and pick it up from a locker on your schedule. Simple and private.</p></div></div>
+      </div>
+    </div>
+    <div class="callcard reveal">
+      <h3>Talk to a real person</h3>
+      <p>Not sure where to start? Call us. We can point you to a pantry, help with SNAP questions, or connect you with a program that fits your family.</p>
+      <a class="num" href="tel:+12199801777">219.980.1777</a>
+      <div class="row">
+        <a class="btn btn-accent" href="tel:+12199801777">Call Now</a>
+        <a class="btn btn-ghost" href="#contact">Visit Us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="programs">
+  <div class="wrap">
+    <div class="head reveal">
+      <div>
+        <span class="eyebrow">Programs</span>
+        <h2>More than a meal.</h2>
+        <p class="lead">From babies to seniors, our programs meet people where they are, with food and the support that helps hunger stop coming back.</p>
+      </div>
+      <a class="btn btn-dark" href="tel:+12199801777">Ask About a Program</a>
+    </div>
+    <div class="cards">
+      <article class="card reveal"><h3>SNAP Outreach</h3><p>Help understanding and applying for SNAP benefits, so families can stretch their grocery budget further.</p><a href="#contact">Learn more →</a></article>
+      <article class="card reveal"><h3>Commodity Supplemental Food Program</h3><p>Monthly food boxes that help eligible older neighbors get the nutrition they need.</p><a href="#contact">Learn more →</a></article>
+      <article class="card reveal"><h3>Pantry Pack</h3><p>A backpack program that sends kids home with food, so the weekend isn't a hungry one.</p><a href="#contact">Learn more →</a></article>
+      <article class="card reveal"><h3>Diaper Bank</h3><p>Diapers are a basic need too. We help families with little ones keep up with the essentials.</p><a href="#contact">Learn more →</a></article>
+      <article class="card reveal"><h3>Food is Medicine</h3><p>Connecting good food with good health, because what's on the plate matters for how people feel.</p><a href="#contact">Learn more →</a></article>
+      <article class="card reveal"><h3>Job Training</h3><p>Training that builds skills and opens doors to steady work, a long-term answer to hunger.</p><a href="#contact">Learn more →</a></article>
+    </div>
+  </div>
+</section>
+
+<section class="involved" id="involved">
+  <div class="wrap">
+    <div class="head reveal">
+      <div>
+        <span class="eyebrow">Get Involved</span>
+        <h2>The Region feeds the Region.</h2>
+        <p class="lead">Every shift, every can, every dollar keeps food moving to neighbors who need it. Pick the way that fits you.</p>
+      </div>
+    </div>
+    <div class="ways">
+      <div class="way reveal"><h3>Volunteer</h3><p>Sort, pack, and send food out the door. Bring a friend, your family, or your whole team for a shift.</p><a class="btn btn-accent" href="tel:+12199801777">Sign Up</a></div>
+      <div class="way reveal"><h3>Host a Food Drive</h3><p>Rally your school, church, or workplace. Collected food goes straight to pantries across both counties.</p><a class="btn btn-accent" href="tel:+12199801777">Start a Drive</a></div>
+      <div class="way reveal"><h3>Food Rescue</h3><p>Grocers and businesses: good surplus food shouldn't go to waste. We'll help get it to people who need it.</p><a class="btn btn-accent" href="tel:+12199801777">Partner With Us</a></div>
+      <div class="way reveal"><h3>Speak Up</h3><p>Advocacy matters. Help us tell lawmakers and neighbors that hunger in Northwest Indiana is real and solvable.</p><a class="btn btn-accent" href="http://www.foodbanknwi.org" rel="noopener">Join In</a></div>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <div class="head reveal">
+      <div>
+        <span class="eyebrow">Inside the Food Bank</span>
+        <h2>Where the food moves.</h2>
+        <p class="lead">Trucks in, pallets sorted, vans out. Our Merrillville distribution facility is the hub that keeps 150+ partners stocked.</p>
+      </div>
+    </div>
+    <div class="gallery-grid three reveal">
+      <figure class="frame g-big">
+        <img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9TB9HcIihHqO7Z8Dv-wnla6XtaQQZaATplaMUF5Yne_WejxDMLuf6WcwrGWb5Ax03tFHGmoeG5NAX00GEo3bOdXrS8UJsYBhu6E36zAWDBrZbrcn7JhFX3GkBUG0ZVC1vJdwFiy=w1600-h1600" alt="Boxed food being unloaded from a truck at the food bank" width="1600" height="1200" loading="lazy">
+        <figcaption>Truck unload of boxed food</figcaption>
+      </figure>
+      <figure class="frame g-tall" style="grid-column:auto">
+        <img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9Rn9HNvMONn_ARioe1kxIRqP9RT7KmlYDYjNgGfkLCWweNLvmWt1QGUN2ncFwqSD2EetNpUPYlveBS9qo2jRmbQQcSvdBxZIkQHMdi5qG6e9BgyJpkwNfN1Osa8VESA9C4P-zgnPw=w1600-h1600" alt="Aerial view of cars lined up at a food distribution" width="1219" height="871" loading="lazy">
+        <figcaption>Drive-through distribution</figcaption>
+      </figure>
+      <figure class="frame g-tall">
+        <img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9R6JRQX6kChie_P4mUNLFjrQm2OPU3Rmeyf6AX2Fbu1AkVE4X2LGGE5jOHM3vT7b-9PdhWny8OyLIzaHrSw2gmGUd1jCDrv2D0nPMZfE7gpu1inKmVPypm2yD_bQvjlSYbM_vB5Xg=w1600-h1600" alt="Food bank vans parked in the lot" width="720" height="1600" loading="lazy">
+        <figcaption>Our vans</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap split">
+    <figure class="frame about-photo reveal">
+      <img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9Rn9HNvMONn_ARioe1kxIRqP9RT7KmlYDYjNgGfkLCWweNLvmWt1QGUN2ncFwqSD2EetNpUPYlveBS9qo2jRmbQQcSvdBxZIkQHMdi5qG6e9BgyJpkwNfN1Osa8VESA9C4P-zgnPw=w1600-h1600" alt="Cars lined up for food at a distribution event, seen from above" width="1219" height="871" loading="lazy">
+    </figure>
+    <div class="reveal">
+      <span class="eyebrow">About Us</span>
+      <h2>Born in the Region, built by neighbors.</h2>
+      <p class="lead" style="margin-top:1rem">We're the only food bank serving Lake and Porter counties. The idea came home from a 1981 Indianapolis conference with United Way and Steelworker representatives, and it's been growing ever since.</p>
+      <ul class="timeline">
+        <li><b>1982</b><span>Founded, starting with salvaged food.</span></li>
+        <li><b>1989</b><span>Began accepting donations from retailers.</span></li>
+        <li><b>The barn years</b><span>Operated for years from a 12,000-square-foot barn.</span></li>
+        <li><b>2018</b><span>Moved into a larger distribution facility in Merrillville.</span></li>
+      </ul>
+      <div class="badges">
+        <span class="badge">Feeding America member</span>
+        <span class="badge">501(c)(3) nonprofit</span>
+        <span class="badge">★ 4.5 on Google · 276 reviews</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="area">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Service Area</span>
+      <h2>Two counties. One table.</h2>
+      <p class="lead" style="margin-top:1rem">From the lakeshore to the farm towns, we work with partner agencies across Northwest Indiana so help is never far away.</p>
+    </div>
+    <div class="area-box">
+      <div class="county reveal"><h3>Lake County</h3><p>Pantries, Mobile Markets, and programs through our partner network, with our home base at 6490 Broadway in Merrillville.</p></div>
+      <div class="county alt reveal"><h3>Porter County</h3><p>Partner pantries and community programs reaching neighbors across the county. Call us to find the closest option.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="reveal">
+      <h2>Food for today. Hope for tomorrow.</h2>
+      <p>Need food, want to volunteer, or ready to give? One call gets you started.</p>
+      <div class="ctas">
+        <a class="btn btn-accent" href="tel:+12199801777">Call 219.980.1777</a>
+        <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&query=6490+Broadway+Merrillville+IN+46410" rel="noopener">Get Directions</a>
+      </div>
+    </div>
+    <div class="contact-info reveal">
+      <div class="info"><small>Phone</small><a href="tel:+12199801777">219.980.1777</a></div>
+      <div class="info"><small>Address</small><span>6490 Broadway, Merrillville, IN 46410</span></div>
+      <div class="info"><small>Online</small><a href="http://www.foodbanknwi.org" rel="noopener">foodbanknwi.org</a></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="f-grid reveal">
+      <div>
+        <div class="f-name">Food Bank of Northwest Indiana</div>
+        <p>The food bank for Lake and Porter counties. A Feeding America member and 501(c)(3) nonprofit.</p>
+        <p style="margin-top:.8rem">6490 Broadway, Merrillville, IN 46410<br><a href="tel:+12199801777">219.980.1777</a></p>
+      </div>
+      <div>
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="#find">Get Food</a></li>
+          <li><a href="#programs">Programs</a></li>
+          <li><a href="#involved">Get Involved</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#area">Service Area</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Follow</h3>
+        <ul>
+          <li><a href="https://www.facebook.com/FoodBankofNorthwestIndiana" rel="noopener">Facebook</a></li>
+          <li><a href="https://www.instagram.com/foodbanknwi/" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.linkedin.com/company/food-bank-of-northwest-indiana" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://twitter.com/foodbanknwi" rel="noopener">X / Twitter</a></li>
+          <li><a href="https://www.youtube.com/foodbankofnwi" rel="noopener">YouTube</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="f-bottom">
+      <span>© Food Bank of Northwest Indiana</span>
+      <span>Serving Lake &amp; Porter counties</span>
+    </div>
+  </div>
+</footer>
+
+<a class="btn btn-primary give-float" href="#involved">Give Help</a>
+
+<script>
+(function(){
+  var t=document.querySelector('.toggle'),m=document.getElementById('menu');
+  if(t&&m){
+    t.addEventListener('click',function(){
+      var o=t.getAttribute('aria-expanded')==='true';
+      t.setAttribute('aria-expanded',String(!o));
+      t.setAttribute('aria-label',o?'Open menu':'Close menu');
+      m.classList.toggle('open',!o);
+    });
+    m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){
+      t.setAttribute('aria-expanded','false');t.setAttribute('aria-label','Open menu');m.classList.remove('open');
+    });});
+  }
+})();
+(function(){
+  var els=document.querySelectorAll('.reveal');
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(!('IntersectionObserver' in window)||reduce){
+    els.forEach(function(e){e.classList.add('in');});return;
+  }
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});
+  },{threshold:0.12,rootMargin:'0px 0px -40px 0px'});
+  els.forEach(function(e){io.observe(e);});
+})();
+</script>
+</body>
+</html>
